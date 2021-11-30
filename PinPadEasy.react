@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+export default function App() {
+  const [pin, setPin] = useState("");
+  return (
+    <div>
+      <div>{pin}</div>
+      <div>
+        <div>
+          <button onClick={() => setPin((pin) => `${pin}1`)}>1</button>
+          <button onClick={() => setPin((pin) => `${pin}2`)}>2</button>
+          <button onClick={() => setPin((pin) => `${pin}3`)}>3</button>
+        </div>
+        <div>
+          <button onClick={() => setPin((pin) => `${pin}4`)}>4</button>
+          <button onClick={() => setPin((pin) => `${pin}5`)}>5</button>
+          <button onClick={() => setPin((pin) => `${pin}6`)}>6</button>
+        </div>
+        <div>
+          <button onClick={() => setPin((pin) => `${pin}7`)}>7</button>
+          <button onClick={() => setPin((pin) => `${pin}8`)}>8</button>
+          <button onClick={() => setPin((pin) => `${pin}9`)}>9</button>
+        </div>
+        <div>
+          <button onClick={() => setPin((pin) => pin.slice(0, pin.length - 1))}>
+            &lt;
+          </button>
+          <button onClick={() => setPin((pin) => `${pin}0`)}>0</button>
+          <button onClick={() => setPin("")}>C</button>
+        </div>
+      </div>
+    </div>
+  );
+}
